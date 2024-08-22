@@ -7,7 +7,7 @@
     <meta name="viewport" content="width-device-width, iniitial-scale=1.0">
     <title> Personal Portfolio Website </title>
     <link rel="stylesheet" href="style.css"> 
-
+    <script src="https://kit.fontawesome.com/6ed0c8de8f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="header">
@@ -17,9 +17,8 @@
             <ul>
                 <li> <a href="#">Home</a></li>
                 <li> <a href="#about">About</a></li>
-                <li> <a href="#projects">Projects</a></li>
+                <li> <a href="#projects">Tech</a></li>
                 <li> <a href="#writing">Writing</a></li>
-                <li> <a href="#music">Misc</a></li>
                 <li> <a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -27,7 +26,6 @@
             <h1>Hi, I'm Angeles!</h1>
             <!-- TODO: Add a cool animation for each of these when you hover over brains it turns into a brain, bytes into computer, and books into pages -->
             <h2>Brains. Bytes. Books. <h2>
-
         </div>
     </div>
 </div>
@@ -78,127 +76,117 @@
 <!-- -----------CS/AI Projects----------- -->
 <div id="projects">
     <div class="container">
-        <h1 class="sub-title">Projects</h1>
-        <p class="sub-sub-title"> Something deep that summarizes life</p>
+        <h1 class="sub-title">Tech Portfolio</h1>
+        <!-- <p class="sub-sub-title"> "We are all now connected by the Internet, like neurons in a giant brain."</p>
+        <p>  — Stephen Hawking </p>  -->
         <div class="projects-list">
-            <!-- BOX AI -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h2>Box AI on Videos</h2>
-                    </div>
-                    <div class="flip-card-back">
-                        <p></p>
-                        <h3>Box, Inc.</h3>
-                        <p class="role">Software Engineer Intern</p>
-                        <p class="date"> Summer 2024</p>
-                        <p></p>
-                        <p class="description">Enabled Box AI on videos. Created image evaluation set.</p>
-                        <a href="https://www.box.com/" target="_blank"> Learn More About Box, Inc. </a>
-                    </div>
-                </div>
-            </div>  
+            <!-- Box AI -->
+            <div class="project-card">
+                <h2>Box AI on Videos</h2>
+                <img src="images/box-ai.png" alt="Box AI project image">
+                <h3>Box, Inc.</h3>
+                <p class="role">Software Engineer Intern</p>
+                <p class="date"> Summer '24</p>
+                <p class="description">Enabled Box AI on videos Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+                <a href="https://www.box.com/" target="_blank"> learn more </a>
+            </div>
             <!-- EEG Sleep UROP -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h2> Machine Learning & Mice </h2>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Picower Institute for Learning & Memory</h3>
-                        <p class="role">Data Scientist</p>
-                        <p></p>
-                        <p class="date"> Spring 2024</p>
-                        <p class="description">Research project aimed to improve sleep stage ML classification in mice using EEG data to better understand the relationship between sleep and hunger. Investigated brainwave data misclassifications and defined electrode quality standards through PCA and other statistical methods.</p>
-                        <a href="https://github.com/angelescibils/eeg_urop" target="_blank">Learn More About EEG Data Analysis</a>
-                    </div>
-                </div>
-            </div> 
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h2> Brainwaves & Consumer Engagement </h2>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Neurons, Inc.</h3>
-                        <p class="role">Software Product Intern</p>
-                        <p class="date">Summer 2023</p>
-                        <p class="description">Developed and implemented an Intersubject Correlation algorithm to analyze brainwave data and predict marketing success, analyzing 95 videos' consumer engagement.</p>
-                        <a href="https://www.neuronsinc.com/" target="_blank"> Learn More About Neurons, Inc. </a>
-                    </div>
-                </div>
-            </div> 
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h2> Neutrinos & Dark Matter </h2>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Laboratory for Nuclear Science</h3>
-                        <p class="role"> Research Assistant</p>
-                        <p class="date"> Spring 2023</p>
-                        <p class="description">
-                            Improved sample rate and down sampling techniques for efficient particle pulse analysis by enhancing triggering and signal identification algorithms.</p>
-                        <a href="https://formaggio.mit.edu/" target="_blank"> Learn More About Neutrinos</a>
-                    </div>
-                </div>
-            </div> 
+            <div class="project-card">
+                <h2>ML & Mice</h2>
+                <img src="images/picower.jpg" alt="EEG Sleep UROP image">
+                <h3>MIT's Picower Institute</h3>
+                <p class="role">Machine Learning Data Scientist</p>
+                <p class="date"> Spring '24</p>
+                <p class="description">Improved machine learning classification of sleep stages in mice to better understand the relationship between sleep and hunger</p>
+                <a href="https://github.com/angelescibils/eeg_urop" target="_blank">learn more</a>
+            </div>
+            <!-- Neurons Inc -->
+            <div class="project-card">
+                <h2>Brainwaves</h2>
+                <img src="images/neurons-inc.jpg" alt="Neurons Inc image">
+                <h3>Neurons, Inc.</h3>
+                <p class="role">Software Product Intern</p>
+                <p class="date"> Summer '23</p>
+                <p class="description">Developed Intersubject Correlation algorithm to analyze brainwave data and predict consumer video engagement</p>
+                <a href="https://www.neuronsinc.com/" target="_blank"> learn more </a>
+            </div>
+            <!-- NEDM UROP -->
+            <div class="project-card">
+                <h2>Neutrinos</h2>
+                <img src="images/nedm-antennas.JPG" alt="NEDM Urop image">
+                <h3>MIT's Lab for Nuclear Science</h3>
+                <p class="role">Research Assistant</p>
+                <p class="date">Spring '23</p>
+                <p class="description">Improved down sampling techniques for efficient particle pulse analysis by enhancing triggering identification algorithms</p>
+                <a href="https://formaggio.mit.edu/" target="_blank"> learn more</a>
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="projects-container">
-    <div class="project-card">
-        <h2>Machine Learning & Mice</h2>
-        <p>Picower Institute for Learning & Memory Data Scientist, Spring 2024</p>
-    </div>
-    <div class="project-card">
-        <h2>Neutrinos & Dark Matter</h2>
-        <p>Laboratory for Nuclear Science Research Assistant, Spring 2023</p>
-    </div>
-    <div class="project-card">
-        <h2>Brainwaves & Marketing</h2>
-        <p>Neurons, Inc. Summer 2023</p>
-    </div>
-    <div class="project-card">
-        <h2>Box AI</h2>
-        <p>Software Engineering Intern at Box, Summer 2024</p>
     </div>
 </div>
 
  <!-- -----------Writing----------- -->
  <div id="writing">
     <div class="container">
-        <h1 class="sub-title">Writing</h1>
-        <div class="row">
-            <div class="writing-col">
-                <h2>Writing 1</h2>
-                <p>Details about Writing 1.</p>
+        <h1 class="sub-title">Writing Portfolio</h1>
+        <div class="writing-list">
+            <div class="writing">
+                <img src="images/writing-1.png" alt="Archimedean Letters">
+                <div class="layer">
+                    <h3>The Archimedean Letters</h3>
+                    <p> Fantasy Mistery Short story </p>
+                    <a href="https://www.amazon.com/Archimedean-Letters-Angeles-Cibils-ebook/dp/B077XS1JJD/ref=sr_1_1?crid=KJEDBE60XSQG&dib=eyJ2IjoiMSJ9.iQZVscei-SPOVKMn8ONzSah-8AihUS3F3Kk6I5COAYjGjHj071QN20LucGBJIEps.0xTH9_5-pa9zWJNr08KZ0HbOkMvAYXGDOjs9mgCkZ5E&dib_tag=se&keywords=archimedean+letters&qid=1724273266&sprefix=archimedean+letter%2Caps%2C264&sr=8-1" target="_blank"> read </a>
+                </div>
             </div>
-            <div class="writing-col">
-                <h2>Writing 2</h2>
-                <p>Details about Writing 2.</p>
+            <div class="writing">
+                <img src="images/writing-2.png" alt="Short Story Collection">
+                <div class="layer">
+                    <h3>Short Stories Collection</h3>
+                    <p> Fantasy Mistery Short story </p>
+                    <a href="writing_portfolio.html" target="_blank"> read </a>
+                </div>
+            </div>
+            <div class="writing">
+                <img src="images/writing-3.png" alt="Insta Poetry Collection">
+                <div class="layer">
+                    <h3>Poetry Collection</h3>
+                    <p> Fantasy Mistery Short story </p>
+                    <a href="https://www.instagram.com/angelescibils_author/" target="_blank"> read </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <!-- -----------Misc----------- -->
-<div id="music">
-    <div class="container">
-        <h1 class="sub-title">Music</h1>
-        <p>Details about your music interests or projects.</p>
-        <p>Other things I'm interested in: Education, Physics (nuclear & astronomy), Ancient history.</p>
-    </div>
-</div>
+<!-- <p>Other things I'm interested in: Music, Education, Physics (nuclear & astronomy), Ancient history.</p> -->
+
 
 <!-- -----------Contact----------- -->
 <div id="contact">
     <div class="container">
-        <h1 class="sub-title">Contact</h1>
-        <p>Want to know more about my college life? Here is my YouTube channel: <a href="YOUR_YOUTUBE_LINK" target="_blank">YouTube</a>.</p>
-        <p>Want to know me professionally? Here is my LinkedIn: <a href="YOUR_LINKEDIN_LINK" target="_blank">LinkedIn</a>.</p>
-        <p>Want to know about some other fun projects that I goof off about? Here's my TikTok: <a href="YOUR_TIKTOK_LINK" target="_blank">TikTok</a>.</p>
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="social-icons">
+                    <a href="" target="_blank">Instagram</a>
+                    <a href="" target="_blank">LinkedIn</a>
+                    <a href="" target="_blank">Youtube</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright @ Angeles Cibils.</p>
     </div>
 </div>
 
@@ -220,7 +208,24 @@
 
 
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz49HWPc5nm05SKKNMhCPqfrU8L8Q-4hcEPjXeKfU9Y936dJKJEwemP8wozV8oR638v/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML= ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
-
 
 </html>

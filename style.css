@@ -4,6 +4,7 @@
 
 /* Purple: #531d72, #300f44, #dcbeee */
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 
 /* ---- MAIN BODY ---- */
 * {
@@ -27,14 +28,13 @@ body {
 #header{
     width:100%;
     height:100vh;
-    /* background-image: url(images/background-im.jpeg); */
-    /* background-size: cover;
+    /* background-image: url(images/background-im3.png);
+    background-size: cover;
     background-position: center; */
 }  
 .container{
     padding: 30px 10%; 
 }
-
 /* ---- NAVIGATION MENU ---- */
 nav{
     display: flex;
@@ -44,6 +44,7 @@ nav{
 }
 .logo{
     width: 250px;
+    height: auto;
 
 }
 nav ul li{
@@ -168,148 +169,232 @@ nav ul li a:hover {
     font-size: 60px;
     font-weight:100;
 }
-/* .projects h2 {
-    font-size: 30px; 
-    color: #5d9793; 
-    font-style: italic;
-} */
-.projects-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
-    grid-gap: 30px;
-    margin-top:20px;
-}
-.projects-list h2 {
-    font-size: 30px;
-    color: #f6f5ec;
-    margin-bottom: 10px;
-    padding: 20px;
-}
-
-.projects-list h3{
-    font-size: 25px;
-    color: #176663;
-    margin-bottom: 5px;
-}
-.projects-list .role{
-    font-size: 25px;
-    color: #176663;
-    margin-bottom: 5px;
+.sub-sub-title {
     font-style: italic; 
+    font-size: 25px; 
+    color: #5d9793; 
 }
-.projects-list .date {
-    font-size: 20px;
-    color: #5d9793;
-    margin-bottom: 5px;
-    position: absolute; /* Add this line */
-    top: 10px; /* Adjust as needed */
-    right: 10px; /* Adjust as needed */
-}
-.projects-list .description {
-    font-size: 20px;
-    color: #063533;
-    margin-bottom: 15px;
-}
-.flip-card {
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    /* perspective: 1000000px; Adjust perspective to control the 3D effect */
-    position: relative; 
-    overflow: hidden;
-    display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-}
-.flip-card-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.6s ease-in-out;
-}
-
-/* Set up the front and back faces of the card */
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box; 
-    text-align: center;
-}
-.flip-card-front {
-    color: #5d9793;
-    background: #5d9793; /* Ensure the background color matches */
-    z-index: 2; /* Ensure it's on top by default */
-    transition: opacity 0.6s ease-in-out; /* Smooth transition */
-    border: 2px solid #ebeae1
-}
-.flip-card-back {
-    background: #f6f5ec; /* Adjust as needed */
-    color: #176663; 
-    opacity: 0; 
-    z-index: 1;
-    transition: opacity 0.6s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #5d9793; /* Add a border with desired color and width */
-}
-.flip-card:hover .flip-card-front {
-    opacity: 0; /* Fade out the front face */
-    z-index: 1;
-}
-.flip-card:hover .flip-card-back {
-    opacity: 1; /* Fade in the back face */
-    z-index: 2;
-}
-/* Specific styles for roles and dates */
-.flip-card-back .role,
-.flip-card-back .date,
-.flip-card-back .description {
-    margin-bottom: 10px; /* Space between lines */
-    text-align: center; /* Center-align text */
-}
-/* Optional: Adjust font sizes and styles for better alignment */
-/* .flip-card-front h2, .flip-card-back h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.flip-card-front h3, .flip-card-back h3 {
-    font-size: 25px;
-    margin-bottom: 5px;
-    font-style: italic;
-}
-
-.flip-card-front p, .flip-card-back p {
-    font-size: 20px;
-    margin-bottom: 15px;
-} */
-.projects-container {
+.projects-list {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 20px;
+    flex-wrap: nowrap;
+}
+.projects-list h2 {
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    color: #176663;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: center;
+    font-weight: normal;
 }
 
+.projects-list h3{
+    font-size: 20px;
+    color: #176663;
+    margin-bottom: 5px;
+}
+.projects-list .role{
+    font-size: 20px;
+    color: #176663;
+    margin-bottom: 5px;
+    font-style: italic; 
+}
+.project-card .date {
+    font-size: 16px;
+    color: #176663;
+    margin-bottom: 5px;
+    position: absolute; /* Add this line */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    font-style: italic;
+}
+.project-card .description {
+    font-family: 'Lora', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: #176663;
+}
 .project-card {
-    min-width: 300px;
+    position: relative; /* Add this to make sure the .date is positioned relative to the project-card */
+    min-width: 300px; /* This is the current minimum width */
+    max-width: 350px; /* Add a maximum width to control the width */
     flex-shrink: 0;
     margin-right: 20px;
     scroll-snap-align: start;
-    background-color: #f4f4f4;
+    background-color: #d8d2c4;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease; /* Ensure the transition is smooth */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
-
+.projects-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+}
 .projects-container::-webkit-scrollbar {
     display: none;
 }
+.project-card a {
+    display: inline-block; /* Make the link behave like a block-level element for padding and border */
+    padding: 10px 15px; /* Add padding inside the box */
+    margin-top: 10px; /* Add some space above the box */
+    background-color: #5d9793; /* Background color for the box */
+    color: #ebeae1; /* Text color */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 5px; /* Rounded corners for the box */
+    border: 2px solid #5d9793; /* Border color matching the background */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition on hover */
+    font-weight: lighter;
+}
+.project-card a:hover {
+    background-color: #ebeae1; /* Change background color on hover */
+    color: #5d9793; /* Change text color on hover */
+    border-color: #ebeae1; /* Change border color on hover */
+}
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+.project-card:hover {
+    transform: translateY(-10px); /* Moves the card up by 10px */
+    transition: transform 0.5s; /* Smooth transition effect */
+    background-color: #95aca1;
+}
+/* -----------Writing----------- */
+#writing{
+    padding: 50px 0;
+}
+.writing-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.writing{
+    border-radius: 10px;
+    position:relative;
+    overflow: hidden;
+    height: 575px; /* Adjust as needed */
+}
+.writing img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width:100%;
+    height:0;
+    background: linear-gradient(rgba(0,0,0,0.6), #063533) ;
+    border-radius:10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 16px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #ebeae1; 
+    font-size: 30px;
+}
+.layer p{
+    color: #d8d2c4; 
+    font-size: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color:#176663; 
+    line-height: 60px;
+    background: #ebeae1; 
+    width: 60px; 
+    border-radius: 50%; 
+    text-align: center;
+}
+.writing:hover img{
+    transform: scale(1.1);
+
+}
+.writing:hover .layer{
+    height: 100%;
+}
+/* -----------Contact----------- */
+.contact-left{
+    flex-basis:35%;
+}
+.contact-right{
+    flex-basis:60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none; 
+    font-size: 30px;
+    margin-right:15px;
+    color: #063533;
+    display: inline-block;
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: #063533;
+    color: #ebeae1;
+}
+.contact-right form{
+    width:100%; 
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #d8d2c4;
+    padding: 15px;
+    margin: 15px 0;
+    color: #176663; 
+    font-size: 18px; 
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #d8d2c4;
+    font-weight: 300;
+    margin-top: 20px;
+}
+#msg{
+    color:#063533;
+    margin-top:0px;
+    display: block;
+}
+/* -----------TODO: CSS for small screens----------- */ 

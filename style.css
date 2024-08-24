@@ -346,6 +346,10 @@ nav ul li a:hover {
 /* -----------Contact----------- */
 .contact-left{
     flex-basis:35%;
+    text-align: center; /* Center align the text and icons */
+}
+.contact-left .sub-title{
+    margin-bottom: 10px; 
 }
 .contact-right{
     flex-basis:60%;
@@ -355,13 +359,21 @@ nav ul li a:hover {
 }
 .social-icons{
     margin-top: 30px;
+    display: flex;   /*  Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center the icons horizontally */
+    /* gap: 15px; */
 }
 .social-icons a{
     text-decoration: none; 
     font-size: 30px;
     margin-right:15px;
     color: #063533;
-    display: inline-block;
+    /* display: inline-block; */
+}
+.picture-icons img {
+    width: 30px; /* Set a width for the icons */
+    height: 30px; /* Set a height for the icons */
 }
 .btn.btn2{
     display: inline-block;

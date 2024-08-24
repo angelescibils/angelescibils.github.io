@@ -155,6 +155,10 @@ nav ul li a:hover {
     color: #063533; 
     font-size: 18px; 
 }
+.sub-script {
+    color: #5d9793;
+    font-size: 18px;
+}
 .tab-contents{
     display: none;
 }

@@ -380,6 +380,10 @@ nav ul li a:hover {
     background-color: #063533;
     color: #ebeae1;
 }
+.btn.btn2.processing {
+    background-color: #5d9793; /* Change this color to what you prefer while processing */
+    cursor: not-allowed; /* Optional: change cursor to indicate processing */
+}
 .contact-right form{
     width:100%; 
 }
@@ -409,7 +413,7 @@ form .btn2{
     margin-top: 20px;
 }
 #msg{
-    color:#063533;
+    color:#5d9793;
     margin-top:0px;
     display: block;
 }

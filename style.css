@@ -117,55 +117,30 @@ nav ul li a:hover {
     font-weight:100;
     color: #176663; 
 }
-.tab-titles{
-    display:flex;
-    margin: 20px, 0, 40px;
+.education-section, .skills-section {
+    margin-bottom: 40px;
 }
-.tab-links{
-    margin-right: 50px;
-    font-size: 30px;
+.education-section h2, .skills-section h2 {
+    font-size: 35px;
+    font-style: italic;
     font-weight: 500;
-    cursor: pointer;
-    position:relative;
-
+    color: #176663;
 }
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #176663;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 1s; 
+.education-section ul, .skills-section ul {
+    list-style-type: none;
+    padding: 0;
 }
-.tab-links.active-link::after{
-    width:75%; 
+.education-section ul li, .skills-section ul li {
+    margin-bottom: 20px; /* Spacing between list items */
 }
-
-.tab-links:hover {
-    font-style: italic; /* Set the font style to italic on hover */
-}
-
-.tab-contents ul li{
-    list-style: none;
-    margin: 20px 0;
-}
-.tab-contents ul li span{
-    color: #063533; 
-    font-size: 18px; 
+.education-section ul li span, .skills-section ul li span {
+    color: #063533;
+    font-size: 18px;
 }
 .sub-script {
     color: #5d9793;
     font-size: 18px;
 }
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
-}
-
 /* -----------CS/AI Projects----------- */
 #projects {
     padding: 30px 0;

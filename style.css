@@ -101,7 +101,7 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 .about-col-1{
-    flex-basis: 35%;
+    flex-basis: 40%;
     display: flex; /* Ensures the image stretches */
     align-items: stretch; /* Makes sure it fills the column */
 }
@@ -112,8 +112,7 @@ nav ul li a:hover {
     border-radius: 100px; 
 }
 .about-col-2{
-    flex-basis: 60%;
-
+    flex-basis: 55%;
 }
 .sub-title{
     font-size: 60px;

@@ -1,242 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width-device-width, iniitial-scale=1.0">
-    <title> Angeles Cibils's Website </title>
-    <link rel="stylesheet" href="style.css"> 
-    <script src="https://kit.fontawesome.com/6ed0c8de8f.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angeles Cibils Bernardes</title>
+  <meta name="description" content="Angeles Cibils Bernardes's website." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Tabler Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css" />
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/logo-3.png" class="logo">
-            <ul>
-                <li> <a href="#">Home</a></li>
-                <li> <a href="#about">About</a></li>
-                <li> <a href="#projects">Tech</a></li>
-                <li> <a href="#writing">Writing</a></li>
-                <li> <a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <h1>Hi, I'm Angeles!</h1>
-            <!-- TODO: Add a cool animation for each of these when you hover over brains it turns into a brain, bytes into computer, and books into pages -->
-            <h2>Brains. Bytes. Books. <h2>
+
+  <!-- ── NAV ──────────────────────────────────── -->
+  <nav>
+    <span class="nav-name">Angeles Cibils Bernardes</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#tech">Tech</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#letters">Letters</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ─────────────────────────────────── -->
+  <section class="hero">
+    <h1 class="hero-name">Angeles Cibils Bernardes</h1>
+    <hr class="hero-rule" />
+    <p class="hero-tagline">Brains. Bytes. Books.</p>
+    <p class="hero-desc">Author of worlds you'll want to live in.</p>
+  </section>
+  <div style="height: 7vh;"></div>
+
+  <!-- ── ABOUT ─────────────────────────────────── -->
+  <section class="bg-parchment" id="about">
+    <div class="about-split">
+  
+      <!-- LEFT: photo fills full height -->
+      <div class="about-photo">
+        <img src="images/background-im.jpeg" alt="Angeles Cibils Bernardes" />
+      </div>
+  
+      <!-- RIGHT: content -->
+      <div class="about-content">
+        <p class="section-eyebrow">About</p>
+        <h2 class="about-name">Hi, I'm Angeles!</h2>
+        <div class="about-bio">
+            <p>I'm a senior at MIT studying <strong>Computer Science</strong> and <strong>Cognitive Science</strong>, with a focus on <strong>AI</strong> & <strong>Neurolinguistics</strong>. Soon, I’ll be joining <strong>Box’s AI team</strong> as a full-time <strong>software engineer</strong>. I love blending letters, numbers, and stories—whether through coding, research, or writing. Originally from <strong>Paraguay</strong>, I’m always looking for ways to bring my unique perspective into my work. Right now, I'm working on my <strong>debut novel</strong> <em>[REDACTED TITLE]</em></p>        </div>
+        <div class="medium-pills">
+          <span class="pill">Software engineering</span>
+          <span class="pill">Neuroscience</span>
+          <span class="pill">Math education</span>
+          <span class="pill">Songwriting</span>
+          <span class="pill">Fantasy fiction</span>
         </div>
-        <!-- <img src="images/ebeae1.png" class="header-image"> -->
+      </div>
+  
     </div>
-</div>
+  </section>
 
-<!-- -----------ABOUT----------- -->
-<div id="about">
+  <!-- ── WORLDS ────────────────────────────────── -->
+  <section class="bg-parchment" id="worlds">
     <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/background-im.jpeg">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title"> About Me</h1>
-                <!-- <p> “Why do you go away? So that you can come back. So that you can see the place you came from with new eyes and extra colors. And the people there see you differently, too. Coming back to where you started is not the same as never leaving.” <br>  </p> -->
-                <p><p>I'm a senior at MIT studying <strong>Computer Science</strong> and <strong>Cognitive Science</strong>, with a focus on <strong>AI</strong> & <strong>Neurolinguistics</strong>. Soon, I’ll be joining <strong>Box’s AI team</strong> as a full-time <strong>software engineer</strong>. I love blending letters, numbers, and stories—whether through coding, research, or writing. Originally from <strong>Paraguay</strong>, I’m always looking for ways to bring my unique perspective into my work. Right now, I'm working on my <strong>debut novel</strong> <em>[REDACTED TITLE]</em></p>
-                </p>
-                <br>
-                <div class="education-section">
-                    <h2>Education</h2>
-                    <ul>
-                        <li><span>Massachusetts Institute of Technology (MIT)</span><br>Computer Science & Cognitive Science</li>
-                    </ul>
-                </div>
-                <div class="skills-section">
-                    <h2>Skills</h2>
-                    <ul>
-                        <li><span>Programming Tools</span><br>GitHub, GitLab</li>
-                        <li><span>Programming Languages</span><br>Python, Java, SQL, R, Verilog, HTML, CSS, JavaScript</li>
-                        <li><span>Languages</span><br>Spanish (native), English (bilingual), French (basic), Guarani (basic)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+      <p class="section-eyebrow">Worlds</p>
+      <h2 class="section-title">Writing</h2>
 
-<!-- -----------CS/AI Projects----------- -->
-<div id="projects">
+      <!-- Debut novel teaser -->
+      <div class="novel-teaser">
+        <p class="novel-badge">Debut novel · in progress</p>
+        <p class="novel-title">Title TBD</p>
+        <p class="novel-desc">A young girl in a distant world sets off to protect her land after a mysterious magical inheritance gets her entire village slaughtered by unknown invaders. A story about burden, belonging, and the places we call home.</p>
+      </div>
+
+      <!-- Other writing -->
+      <div class="writing-grid">
+        <div class="writing-card">
+          <div class="writing-card-thumb">📜</div>
+          <div class="writing-card-body">
+            <p class="writing-card-title">The Archimedean Letters</p>
+            <p class="writing-card-sub">Mystery short story · 2017</p>
+            <a class="writing-card-link" href="https://www.amazon.com/dp/your-link-here" target="_blank" rel="noopener">Read on Amazon →</a>
+          </div>
+        </div>
+        <div class="writing-card">
+          <div class="writing-card-thumb" style="background: var(--moss); color: var(--ink);">🌿</div>
+          <div class="writing-card-body">
+            <p class="writing-card-title">Poetry collection</p>
+            <p class="writing-card-sub">A year of pandemic life</p>
+          </div>
+        </div>
+        <div class="writing-card">
+          <div class="writing-card-thumb" style="background: var(--gold); color: var(--ink);">✦</div>
+          <div class="writing-card-body">
+            <p class="writing-card-title">Short stories</p>
+            <p class="writing-card-sub">More coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CRAFT ─────────────────────────────────── -->
+  <section class="bg-parchment" id="craft">
     <div class="container">
-        <h1 class="sub-title">Tech Portfolio</h1>
-        <p class="sub-sub-title">Brains & Bytes</p>
-        <!-- <p class="sub-sub-title"> "We are all now connected by the Internet, like neurons in a giant brain."</p>
-        <p>  — Stephen Hawking </p>  -->
-        <div class="projects-list">
-            <!-- Box AI -->
-            <div class="project-card">
-                <h2>Box AI on Videos</h2>
-                <img src="images/box-ai.png" alt="Box AI project image">
-                <h3>Box, Inc.</h3>
-                <p class="role">Software Engineer Intern</p>
-                <p class="date"> Summer '24</p>
-                <p class="description">Enabled Box AI to process video files, improving content insights and enhancing enterprise content management.</p>
-                <a href="https://www.box.com/" target="_blank"> learn more </a>
-            </div>
-            <!-- EEG Sleep UROP -->
-            <div class="project-card">
-                <h2>ML & Mice</h2>
-                <img src="images/picower.jpg" alt="EEG Sleep UROP image">
-                <h3>MIT's Picower Institute</h3>
-                <p class="role">Machine Learning Data Scientist</p>
-                <p class="date"> Spring '24</p>
-                <p class="description">Improved machine learning classification of sleep stages in mice to better understand the relationship between sleep and hunger.</p>
-                <a href="https://github.com/angelescibils/eeg_urop" target="_blank">learn more</a>
-            </div>
-            <!-- Neurons Inc -->
-            <div class="project-card">
-                <h2>Brainwaves</h2>
-                <img src="images/neurons-inc.jpg" alt="Neurons Inc image">
-                <h3>Neurons, Inc.</h3>
-                <p class="role">Software Product Intern</p>
-                <p class="date"> Summer '23</p>
-                <p class="description">Developed Intersubject Correlation algorithm to analyze brainwave data and predict consumer video engagement.</p>
-                <a href="https://www.neuronsinc.com/" target="_blank"> learn more </a>
-            </div>
-            <!-- NEDM UROP -->
-            <div class="project-card">
-                <h2>Neutrinos</h2>
-                <img src="images/nedm-antennas.JPG" alt="NEDM Urop image">
-                <h3>MIT's Lab for Nuclear Science</h3>
-                <p class="role">Research Assistant</p>
-                <p class="date">Spring '23</p>
-                <p class="description">Improved down sampling techniques for efficient particle pulse analysis by enhancing triggering identification algorithms.</p>
-                <a href="https://formaggio.mit.edu/" target="_blank"> learn more</a>
-            </div>
+      <p class="section-eyebrow">Craft</p>
+      <h2 class="section-title">Tech &amp; Research</h2>
+      <p class="craft-intro">The tools I use to build worlds — in code, in labs, and in classrooms.</p>
+      <div class="craft-grid">
+        <div class="craft-card">
+          <p class="craft-org">Box, Inc.</p>
+          <p class="craft-title">Box AI on Videos</p>
+          <p class="craft-role">Software Engineer</p>
+          <p class="craft-period">2024 – present</p>
         </div>
+        <div class="craft-card">
+          <p class="craft-org">MIT Picower Institute</p>
+          <p class="craft-title">ML &amp; sleep research in mice</p>
+          <p class="craft-role">ML Data Scientist</p>
+          <p class="craft-period">2023 – 2024</p>
+        </div>
+        <div class="craft-card">
+          <p class="craft-org">Neurons, Inc.</p>
+          <p class="craft-title">Brainwave analysis</p>
+          <p class="craft-role">Software Engineering Intern</p>
+          <p class="craft-period">2023</p>
+        </div>
+        <div class="craft-card">
+          <p class="craft-org">MIT Nuclear Science Lab</p>
+          <p class="craft-title">Particle pulse analysis</p>
+          <p class="craft-role">Research Assistant</p>
+          <p class="craft-period">2021 – 2022</p>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
- <!-- -----------Writing----------- -->
- <div id="writing">
+  <!-- ── MUSIC ─────────────────────────────────── -->
+  <section class="bg-parchment" id="music">
     <div class="container">
-        <h1 class="sub-title">Writing Portfolio</h1>
-        <p class="sub-sub-title">Books</p>
-        <div class="writing-list">
-            <div class="writing">
-                <img src="images/writing-1.png" alt="Archimedean Letters">
-                <div class="layer">
-                    <h3>The Archimedean Letters</h3>
-                    <p> Mystery short story with cryptic letters and hidden dangers . . . </p>
-                    <a href="https://www.amazon.com/Archimedean-Letters-Angeles-Cibils-ebook/dp/B077XS1JJD/ref=sr_1_1?crid=KJEDBE60XSQG&dib=eyJ2IjoiMSJ9.iQZVscei-SPOVKMn8ONzSah-8AihUS3F3Kk6I5COAYjGjHj071QN20LucGBJIEps.0xTH9_5-pa9zWJNr08KZ0HbOkMvAYXGDOjs9mgCkZ5E&dib_tag=se&keywords=archimedean+letters&qid=1724273266&sprefix=archimedean+letter%2Caps%2C264&sr=8-1" target="_blank"> read </a>
-                </div>
-            </div>
-            <div class="writing">
-                <img src="images/writing-2.png" alt="Short Story Collection">
-                <div class="layer">
-                    <h3>Short Stories Collection</h3>
-                    <p> Coming soon . . . </p>
-                    <a href="writing_portfolio.html" target="_blank"> read </a>
-                </div>
-            </div>
-            <div class="writing">
-                <img src="images/writing-3.png" alt="Insta Poetry Collection">
-                <div class="layer">
-                    <h3>Poetry Collection</h3>
-                    <p> A year of pandemic life . . . </p>
-                    <a href="https://www.instagram.com/angelescibils_author/" target="_blank"> read </a>
-                </div>
-            </div>
+      <p class="section-eyebrow">Music</p>
+      <h2 class="section-title">Songs</h2>
+      <div class="music-row">
+        <div class="music-icon">
+          <i class="ti ti-music" aria-hidden="true"></i>
         </div>
+        <div class="music-body">
+          <p>Writing songs is how I learned that rhythm and structure aren't so different from plot. My original songs are on Spotify — made with the same curiosity that goes into everything else.</p>
+          <a class="spotify-btn" href="https://open.spotify.com/artist/your-link-here" target="_blank" rel="noopener">
+            <i class="ti ti-player-play" aria-hidden="true"></i> Listen on Spotify
+          </a>
+        </div>
+      </div>
     </div>
-</div>
+  </section>
 
-<!-- -----------Misc----------- -->
-<!-- <p>Other things I'm interested in: Music, Education, Physics (nuclear & astronomy), Ancient history.</p> -->
-
-
-<!-- -----------Contact----------- -->
-<div id="contact">
+  <!-- ── LETTERS ────────────────────────────────── -->
+  <section class="bg-parchment" id="letters">
     <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/@angelescibilsbernardes2446" target="_blank">
-                        <div class="picture-icons">
-                            <img src = "images/youtube-brands-solid.svg" alt="My Happy SVG">
-                        </div>
-                    </a>
-                    <a href="https://www.instagram.com/angelescibils_author/" target="_blank">
-                        <div class="picture-icons">
-                            <img src = "images/instagram-brands-solid.svg" alt="My Happy SVG"></a>
-                        </div>
-                    </a>
-                    <a href="https://www.linkedin.com/in/angeles-cibils-bernardes" target="_blank">
-                        <div class="picture-icons">
-                            <img src = "images/linkedin-brands-solid.svg" alt="My Happy SVG"></a>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-
-            </div>
-        </div>
+      <p class="section-eyebrow">Letters from Angeles</p>
+      <h2 class="section-title">Dispatches from a world-builder in progress</h2>
+      <div class="letters-grid">
+        <a class="letter-card" href="/letters/world-worth-living-in">
+          <p class="letter-cat">Writing</p>
+          <p class="letter-title">Why I'm building a world you'd want to live in</p>
+          <p class="letter-date">May 2026</p>
+        </a>
+        <a class="letter-card" href="/letters/paraguay-and-fantasy">
+          <p class="letter-cat">Behind the scenes</p>
+          <p class="letter-title">What Paraguay gave my fantasy world that I didn't expect</p>
+          <p class="letter-date">April 2026</p>
+        </a>
+        <a class="letter-card" href="/letters/debugging-and-editing">
+          <p class="letter-cat">Cross-medium</p>
+          <p class="letter-title">Debugging code and editing prose aren't so different</p>
+          <p class="letter-date">March 2026</p>
+        </a>
+      </div>
+      <a class="letters-all" href="/letters">All letters</a>
     </div>
-    <div class="copyright">
-        <p>Copyright @ Angeles Cibils.</p>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────── -->
+  <section class="bg-parchment" id="contact">
+    <div class="container">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title">Say hello</h2>
+      <p class="section-body">Whether you want to talk about fantasy worlds, math, music, or code — I'd love to hear from you.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="https://instagram.com/your-handle" target="_blank" rel="noopener">
+          <i class="ti ti-brand-instagram" aria-hidden="true"></i> Instagram
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/your-handle" target="_blank" rel="noopener">
+          <i class="ti ti-brand-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a class="contact-link" href="https://youtube.com/@your-handle" target="_blank" rel="noopener">
+          <i class="ti ti-brand-youtube" aria-hidden="true"></i> YouTube
+        </a>
+      </div>
     </div>
-</div>
+  </section>
 
+  <!-- ── FOOTER ─────────────────────────────────── -->
+  <footer>
+    <span class="footer-name">Angeles Cibils Bernardes</span>
+    <span class="footer-copy">© 2026 · All rights reserved</span>
+  </footer>
 
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add('active-link');
-        document.getElementById(tabname).classList.add("active-tab");
-    }
-
-
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbz49HWPc5nm05SKKNMhCPqfrU8L8Q-4hcEPjXeKfU9Y936dJKJEwemP8wozV8oR638v/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-    const submitButton = form.querySelector('.btn2'); // Get the submit button
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        submitButton.classList.add('processing'); // Add the processing class to change color
-        msg.innerHTML = "<em>processing . . . </em>";
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "<em>message sent successfully!</em>";
-                submitButton.classList.remove('processing'); // Remove the processing class
-                setTimeout(function(){
-                    msg.innerHTML= "";
-                }, 5000);
-                form.reset();
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                submitButton.classList.remove('processing'); // Ensure button color resets on error too
-            });
-    });
-</script>
 </body>
-
 </html>

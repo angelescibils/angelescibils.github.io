@@ -20,7 +20,7 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#writing">Writing</a></li>
-      <li><a href="#tech">Tech</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#music">Music</a></li>
       <li><a href="#letters">Letters</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -64,77 +64,140 @@
   </section>
 
   <!-- ── WORLDS ────────────────────────────────── -->
-  <section class="bg-parchment" id="worlds">
+  <section class="bg-parchment" id="writing">
     <div class="container">
-      <p class="section-eyebrow">Worlds</p>
-      <h2 class="section-title">Writing</h2>
-
-      <!-- Debut novel teaser -->
-      <div class="novel-teaser">
-        <p class="novel-badge">Debut novel · in progress</p>
-        <p class="novel-title">Title TBD</p>
-        <p class="novel-desc">A young girl in a distant world sets off to protect her land after a mysterious magical inheritance gets her entire village slaughtered by unknown invaders. A story about burden, belonging, and the places we call home.</p>
-      </div>
-
-      <!-- Other writing -->
-      <div class="writing-grid">
-        <div class="writing-card">
-          <div class="writing-card-thumb">📜</div>
-          <div class="writing-card-body">
-            <p class="writing-card-title">The Archimedean Letters</p>
-            <p class="writing-card-sub">Mystery short story · 2017</p>
-            <a class="writing-card-link" href="https://www.amazon.com/dp/your-link-here" target="_blank" rel="noopener">Read on Amazon →</a>
+      <p class="section-eyebrow">Writing</p>
+      <h2 class="section-title">Books</h2>
+  
+      <div class="books-grid">
+  
+        <!-- Card 1: Debut novel -->
+        <div class="book-card">
+          <div class="novel-bg">
+            <p class="novel-bg-eyebrow">Coming Soon</p>
+            <p class="novel-bg-text">A fantasy novel</p>
+            <span class="novel-bg-rule"></span>
+          </div>
+          <div class="book-progress">
+            <!-- Second draft — in progress -->
+            <div class="book-progress-header" style="margin-top:8px;">
+              <span class="book-progress-label">Second draft</span>
+              <span class="book-progress-pct">0%</span>
+            </div>
+            <div class="book-progress-track">
+              <div class="book-progress-fill" style="width:0%;"></div>
+            </div>
+            <!-- First draft — complete -->
+            <div class="book-progress-header" style="margin-top:8px;">
+                <span class="book-progress-label">First draft</span>
+                <span class="book-progress-pct">100%</span>
+              </div>
+              <div class="book-progress-track">
+                <div class="book-progress-fill complete" style="width:100%;"></div>
+              </div>
           </div>
         </div>
-        <div class="writing-card">
-          <div class="writing-card-thumb" style="background: var(--moss); color: var(--ink);">🌿</div>
-          <div class="writing-card-body">
-            <p class="writing-card-title">Poetry collection</p>
-            <p class="writing-card-sub">A year of pandemic life</p>
+  
+        <!-- Card 2: The Archimedean Letters -->
+        <div class="book-card">
+          <img src="images/writing-1.png" alt="The Archimedean Letters" onerror="this.style.display='none'" />
+          <div class="book-bg" style="background:linear-gradient(135deg,#2D3B2E,#5C7A5D);"></div>
+          <div class="book-layer">
+            <p class="book-layer-tag">Short Story · 2017</p>
+            <h3>The Archimedean Letters</h3>
+            <p>Cryptic letters shatter Maga’s quiet life, drawing her into a dangerous mystery. . .</p>
+            <a href="https://www.amazon.com/Archimedean-Letters-Angeles-Cibils-ebook/dp/B077XS1JJD/ref=sr_1_1?dib=eyJ2IjoiMSJ9.WUISU_QxJIdfP__-UZyRQm_qjOQw2PyeL6Y9P4KRC-8MzCHNW7DUM4to7E5iYqgQU2PSh1H-i8nJIVn2n6MTug.qUGZut-eh5wqZLFV4Rhiw2Tcc3-1no8YZrOjHfZZNn4&dib_tag=se&keywords=archimedean+letters&qid=1779661253&sr=8-1" target="_blank" rel="noopener" aria-label="Read on Amazon">
+              <i class="ti ti-arrow-right"></i>
+              Read
+            </a>
           </div>
         </div>
-        <div class="writing-card">
-          <div class="writing-card-thumb" style="background: var(--gold); color: var(--ink);">✦</div>
-          <div class="writing-card-body">
-            <p class="writing-card-title">Short stories</p>
-            <p class="writing-card-sub">More coming soon</p>
+  
+        <!-- Card 3: Vorágine -->
+        <div class="book-card">
+          <img src="images/writing-2.png" alt="Vorágine" onerror="this.style.display='none'" />
+          <div class="book-bg" style="background:linear-gradient(135deg,#3A4C3B,#C9A96E);"></div>
+          <div class="book-layer">
+            <p class="book-layer-tag">Anthology · 2020</p>
+            <h3>Vorágine</h3>
+            <p>Poetry &amp; short stories by young Paraguayan authors.</p>
+            <a href="https://servilibro.com.py/product/voragine-muestra-literaria-de-escritores-y-escritoras-adolescentes/" target="_blank" rel="noopener" aria-label="View on Servilibro">
+              <i class="ti ti-arrow-right"></i>
+              Read
+            </a>
           </div>
         </div>
+  
       </div>
     </div>
   </section>
+  
 
-  <!-- ── CRAFT ─────────────────────────────────── -->
-  <section class="bg-parchment" id="craft">
+  <!-- ── SYSTEMS ───────────────────────────────── -->
+
+<section class="bg-parchment" id="projects">
     <div class="container">
-      <p class="section-eyebrow">Craft</p>
-      <h2 class="section-title">Tech &amp; Research</h2>
-      <p class="craft-intro">The tools I use to build worlds — in code, in labs, and in classrooms.</p>
-      <div class="craft-grid">
-        <div class="craft-card">
-          <p class="craft-org">Box, Inc.</p>
-          <p class="craft-title">Box AI on Videos</p>
-          <p class="craft-role">Software Engineer</p>
-          <p class="craft-period">2024 – present</p>
+      <p class="section-eyebrow">Projects</p>
+      <h2 class="section-title">Tech & Research</h2>
+  
+      <div class="systems-grid">
+  
+        <!-- Box AI -->
+        <div class="system-card">
+          <!-- ↓ Replace with your image: images/box-ai.png -->
+          <img class="system-card-img" src="images/box-ai.png" alt="Box AI on Videos" onerror="this.style.display='none'" />
+          <div class="system-card-body">
+            <p class="system-card-date">Summer '24</p>
+            <h3 class="system-card-title">Box AI on Videos</h3>
+            <p class="system-card-org">Box, Inc.</p>
+            <p class="system-card-role">Software Engineer Intern</p>
+            <p class="system-card-desc">Enabled Box AI to process video files, improving content insights and enhancing enterprise content management.</p>
+            <a class="system-card-link" href="https://www.box.com/" target="_blank" rel="noopener">Learn more</a>
+          </div>
         </div>
-        <div class="craft-card">
-          <p class="craft-org">MIT Picower Institute</p>
-          <p class="craft-title">ML &amp; sleep research in mice</p>
-          <p class="craft-role">ML Data Scientist</p>
-          <p class="craft-period">2023 – 2024</p>
+  
+        <!-- ML & Mice -->
+        <div class="system-card">
+          <!-- ↓ Replace with your image: images/picower.jpg -->
+          <img class="system-card-img" src="images/picower.jpg" alt="ML & Mice" onerror="this.style.display='none'" />
+          <div class="system-card-body">
+            <p class="system-card-date">Spring '24</p>
+            <h3 class="system-card-title">ML & Mice</h3>
+            <p class="system-card-org">MIT Picower Institute</p>
+            <p class="system-card-role">Machine Learning Data Scientist</p>
+            <p class="system-card-desc">Improved machine learning classification of sleep stages in mice to better understand the relationship between sleep and hunger.</p>
+            <a class="system-card-link" href="https://github.com/angelescibils/eeg_urop" target="_blank" rel="noopener">Learn more</a>
+          </div>
         </div>
-        <div class="craft-card">
-          <p class="craft-org">Neurons, Inc.</p>
-          <p class="craft-title">Brainwave analysis</p>
-          <p class="craft-role">Software Engineering Intern</p>
-          <p class="craft-period">2023</p>
+  
+        <!-- Brainwaves -->
+        <div class="system-card">
+          <!-- ↓ Replace with your image: images/neurons-inc.jpg -->
+          <img class="system-card-img" src="images/neurons-inc.jpg" alt="Brainwaves" onerror="this.style.display='none'" />
+          <div class="system-card-body">
+            <p class="system-card-date">Summer '23</p>
+            <h3 class="system-card-title">Brainwaves</h3>
+            <p class="system-card-org">Neurons, Inc.</p>
+            <p class="system-card-role">Software Product Intern</p>
+            <p class="system-card-desc">Developed Intersubject Correlation algorithm to analyze brainwave data and predict consumer video engagement.</p>
+            <a class="system-card-link" href="https://www.neuronsinc.com/" target="_blank" rel="noopener">Learn more</a>
+          </div>
         </div>
-        <div class="craft-card">
-          <p class="craft-org">MIT Nuclear Science Lab</p>
-          <p class="craft-title">Particle pulse analysis</p>
-          <p class="craft-role">Research Assistant</p>
-          <p class="craft-period">2021 – 2022</p>
+  
+        <!-- Neutrinos -->
+        <div class="system-card">
+          <!-- ↓ Replace with your image: images/nedm-antennas.JPG -->
+          <img class="system-card-img" src="images/nedm-antennas.JPG" alt="Neutrinos" onerror="this.style.display='none'" />
+          <div class="system-card-body">
+            <p class="system-card-date">Spring '23</p>
+            <h3 class="system-card-title">Neutrinos</h3>
+            <p class="system-card-org">MIT Lab for Nuclear Science</p>
+            <p class="system-card-role">Research Assistant</p>
+            <p class="system-card-desc">Improved down sampling techniques for efficient particle pulse analysis by enhancing triggering identification algorithms.</p>
+            <a class="system-card-link" href="https://formaggio.mit.edu/" target="_blank" rel="noopener">Learn more</a>
+          </div>
         </div>
+  
       </div>
     </div>
   </section>

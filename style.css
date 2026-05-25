@@ -160,7 +160,7 @@ section {
     display: flex;
     align-items: center;
   }
-.container { max-width: var(--max-w); margin: 0 auto; }
+.container { max-width: var(--max-w); margin: 0 auto; width: 100%;}
 
 .section-eyebrow {
   font-size: 10px;
@@ -274,54 +274,6 @@ section {
   }
 
 /* ── ABOUT ─────────────────────────────────── */
-/* .about-grid {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-.about-avatar {
-  width: 100%;
-  aspect-ratio: 1;
-  background: var(--sage);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: 36px;
-  color: var(--parchment);
-  border: 2px solid var(--moss);
-}
-.about-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.about-bio { font-size: 15px; line-height: 1.85; color: var(--ink-mid); }
-.about-bio p + p { margin-top: 1rem; }
-
-.medium-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 1.25rem;
-}
-.pill {
-  font-size: 11px;
-  font-weight: 500;
-  padding: 4px 12px;
-  border-radius: 100px;
-  background: var(--ink);
-  color: var(--moss);
-  letter-spacing: 0.04em;
-} */
-
-/* ── ABOUT (Layout B — split) ───────────────── */
-/* Remove old .about-grid rules; these replace them */
-
   .about-split {
     display: grid;
     grid-template-columns: 1fr 1.4fr;
@@ -371,123 +323,302 @@ section {
   .about-bio p + p {
     margin-top: 0.875rem;
   }
-/* ── WORLDS ────────────────────────────────── */
-.novel-teaser {
-  background: var(--ink);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem 1.75rem;
-  border-left: 3px solid var(--gold);
-  margin-bottom: 1.5rem;
-}
-.novel-badge {
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-.novel-title {
-  font-family: var(--serif);
-  font-size: 24px;
-  color: var(--parchment);
-  margin-bottom: 0.5rem;
-}
-.novel-desc {
-  font-size: 14px;
-  color: var(--moss);
-  line-height: 1.7;
-}
-.writing-grid {
+/* ── WORLDS / WRITING (book covers) ────────── */
+#worlds .section-title { margin-bottom: 1.5rem; }
+
+.books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
 }
-.writing-card {
-  background: var(--ink-mid);
-  border-radius: var(--radius);
+/* Book card — paperback proportions */
+.book-card {
+  border-radius: 0px;
+  position: relative;
   overflow: hidden;
-  transition: transform var(--transition);
+  cursor: pointer;
+  aspect-ratio: 1 / 1.6;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.writing-card:hover { transform: translateY(-2px); }
-.writing-card-thumb {
-  height: 90px;
-  background: var(--sage);
+.book-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 0px;
+  z-index: 1;
+  transition: transform 0.5s ease;
+}
+.book-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0; 
+  transition: opacity var(--transition), transform 0.5s ease;
+}
+.book-layer {
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; 
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(10,39,12,0.97) 0%,
+    rgba(45,59,46,0.93) 100%,
+    transparent 100%
+  );
+  border-radius: 4px;
+  z-index: 2;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
-  color: var(--parchment);
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+  transition: opacity 0.45s ease;
+  opacity: 0;
 }
-.writing-card-body { padding: 0.875rem 1rem; }
-.writing-card-title {
-  font-size: 13px;
+.book-layer-tag {
+  font-size: 9px;
   font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--parchment);
-  margin-bottom: 4px;
-  line-height: 1.4;
+  margin-bottom: 6px;
 }
-.writing-card-sub { font-size: 11px; color: var(--sage); }
-.writing-card-link {
-  display: inline-block;
-  margin-top: 8px;
-  font-size: 11px;
-  color: var(--gold);
-  border-bottom: 1px solid rgba(201,169,110,0.3);
-  padding-bottom: 1px;
-  transition: border-color var(--transition);
-}
-.writing-card-link:hover { border-color: var(--gold); }
-
-/* ── CRAFT ─────────────────────────────────── */
-.craft-intro {
-  font-size: 14px;
-  color: var(--sage);
-  font-style: italic;
+.book-layer h3 {
   font-family: var(--serif);
-  margin-bottom: 1.5rem;
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--parchment);
+  margin-bottom: 5px;
+  line-height: 1.3;
 }
-.craft-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+.book-layer p {
+  font-size: 12px;
+  color: var(--moss);
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
-.craft-card {
-  background: var(--cream);
-  border: 0.5px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.125rem 1.25rem;
-  transition: border-color var(--transition);
+.book-layer a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0.5rem;
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background var(--transition), transform var(--transition);
+    flex-shrink: 0;
+  }
+  .book-layer a:hover {
+    background: var(--parchment);
+    transform: scale(1.05);
+  }
+.book-card:hover img,
+.book-card:hover .book-bg { opacity: 1; }
+.book-card:hover .book-layer { opacity:1; }
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 48px rgba(0,0,0,0.14);
+  }
+/* Novel placeholder */
+.novel-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(160deg, #1a2e1b 0%, #0a270c 100%);
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .novel-bg-eyebrow {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .novel-bg-rule {
+    display: block;
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.4;
+  }
+  .novel-bg-text {
+    font-family: var(--serif);
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--parchment);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+/* Progress bar — always visible */
+.book-progress {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 3;
+  padding: 1rem 1.25rem 1.25rem;
+  background: linear-gradient(to top, rgba(10,39,12,0.9), transparent);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
-.craft-card:hover { border-color: var(--sage); }
-.craft-org {
-  font-size: 10px;
+.book-progress-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.book-progress-label {
+  font-size: 9px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sage);
-  margin-bottom: 5px;
+  color: var(--moss);
 }
-.craft-title {
+.book-progress-pct {
+  font-family: var(--serif);
   font-size: 14px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 4px;
-  line-height: 1.4;
+  color: var(--gold);
 }
-.craft-role { font-size: 12px; color: var(--sage); }
-.craft-period { font-size: 11px; color: #999; margin-top: 2px; }
-.craft-link {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 11px;
-  color: var(--terracotta);
-  border-bottom: 1px solid rgba(201,123,90,0.3);
-  padding-bottom: 1px;
-  transition: border-color var(--transition);
+.book-progress-track {
+  width: 100%;
+  height: 5px;
+  background: rgba(92,122,93,0.3);
+  border-radius: 100px;
+  overflow: hidden;
 }
-.craft-link:hover { border-color: var(--terracotta); }
+.book-progress-fill {
+  height: 100%;
+  width: 0%; /* ← update this to reflect your progress */
+  background: linear-gradient(90deg, var(--sage), var(--gold));
+  border-radius: 100px;
+}
+.book-progress-fill.complete {
+    background: var(--moss); /* flat green = done, no gold gradient */
+  }
+/* ── SYSTEMS ─────────────────────────────────
+   Add these rules to your style.css
+   ─────────────────────────────────────────── */
 
+   .systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .system-card {
+    background: var(--cream);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 0.5px solid rgba(92,122,93,0.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .system-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 48px rgba(0,0,0,0.14);
+  }
+  
+  .system-card-img {
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+  }
+  
+  .system-card-body {
+    padding: 1.125rem 1.25rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .system-card-date {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sage);
+    text-align: right;
+    margin-bottom: 0.5rem;
+  }
+  
+  .system-card-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  
+  .system-card-org {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--sage);
+    margin-bottom: 2px;
+  }
+  
+  .system-card-role {
+    font-size: 12px;
+    font-style: italic;
+    font-family: var(--serif);
+    color: var(--ink-mid);
+    margin-bottom: 0.875rem;
+  }
+  
+  .system-card-desc {
+    font-size: 13px;
+    color: var(--ink-mid);
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .system-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--sage);
+    padding: 7px 16px;
+    border-radius: var(--radius);
+    align-self: flex-start;
+    transition: background var(--transition);
+    text-decoration: none;
+  }
+  .system-card-link:hover { background: var(--ink); }
+  
+  @media (max-width: 640px) {
+    .systems-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 400px) {
+    .systems-grid { grid-template-columns: 1fr; }
+  }
+  
 /* ── MUSIC ─────────────────────────────────── */
 .music-row {
   display: flex;

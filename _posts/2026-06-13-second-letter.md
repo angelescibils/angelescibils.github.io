@@ -1,11 +1,11 @@
 ---
 layout: letter
-title: "First Letter Placeholder"
+title: "Second Letter Placeholder"
 date: 2026-05-25
-category: Life
+category: Writing
 ---
 
-This is my first letter! 
+This is my second letter! 
 
 I am mostly just testing out the layout for now :) 
 Feel free to ignore everything else here. 

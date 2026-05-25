@@ -1,0 +1,65 @@
+---
+layout: null
+title: Letters from Angeles
+permalink: /letters/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letters from Angeles — Angeles Cibils Bernardes</title>
+  <meta name="description" content="Dispatches from a world-builder in progress." />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css" />
+</head>
+<body>
+
+  <nav>
+    <a class="nav-name" href="/">Angeles Cibils Bernardes</a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#worlds">Writing</a></li>
+      <li><a href="/#systems">Systems</a></li>
+      <li><a href="/#music">Music</a></li>
+      <li><a href="/letters">Letters</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="letters-page">
+    <div class="letters-page-inner">
+
+      <header class="letters-page-header">
+        <p class="section-eyebrow">Letters from Angeles</p>
+        <h1 class="letters-page-title">Dispatches from a world-builder in progress</h1>
+      </header>
+
+      <div class="letters-page-grid">
+        {% for post in site.posts %}
+        <a class="letters-page-card" href="{{ post.url }}">
+          <p class="letter-cat">{{ post.category }}</p>
+          <h2 class="letter-title">{{ post.title }}</h2>
+          <p class="letter-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <p class="letter-date">{{ post.date | date: "%B %Y" }}</p>
+        </a>
+        {% endfor %}
+
+        {% if site.posts.size == 0 %}
+        <p class="letters-empty">No letters yet — check back soon.</p>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-name">Angeles Cibils Bernardes</span>
+    <span class="footer-copy">© 2026 · All rights reserved</span>
+  </footer>
+
+</body>
+</html>

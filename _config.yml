@@ -1,0 +1,21 @@
+# ============================================
+# Angeles Cibils Bernardes — Jekyll Config
+# ============================================
+
+title: Angeles Cibils Bernardes
+description: Author, world-builder, creator.
+author: Angeles Cibils Bernardes
+email: # add your email if you want
+
+# GitHub Pages settings
+baseurl: ""
+url: "https://angelescibils.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: /letters/:slug
+
+# Exclude files from Jekyll build
+exclude:
+  - README.md
+  - node_modules

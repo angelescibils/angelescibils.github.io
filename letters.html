@@ -9,57 +9,78 @@ permalink: /letters/
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Letters from Angeles — Angeles Cibils Bernardes</title>
-  <meta name="description" content="Dispatches from a world-builder in progress." />
+  <meta name="description" content="A collection of thoughts, questions, and things I’m still figuring out." />
   <link rel="stylesheet" href="/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css" />
 </head>
-<body>
-
+<body class="letters-archive-body">
   <nav>
     <a class="nav-name" href="/">Angeles Cibils Bernardes</a>
     <ul class="nav-links">
       <li><a href="/#about">About</a></li>
-      <li><a href="/#worlds">Writing</a></li>
-      <li><a href="/#systems">Systems</a></li>
+      <li><a href="/#writing">Books</a></li>
+      <li><a href="/#projects">Projects</a></li>
       <li><a href="/#music">Music</a></li>
-      <li><a href="/letters">Letters</a></li>
-      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/letters/" aria-current="page">Letters</a></li>
     </ul>
   </nav>
 
-  <div class="letters-page">
-    <div class="letters-page-inner">
+  <main class="field-archive">
+    <header class="field-archive-header">
+      <a class="field-home-back" href="/#letters">← Return to the homepage</a>
+      <p class="field-label">The complete correspondence</p>
+      <h1>Letters from Angeles</h1>
+      <p class="field-archive-intro">A collection of thoughts, questions, and things I’m still figuring out.</p>
+    </header>
 
-      <header class="letters-page-header">
-        <p class="section-eyebrow">Letters from Angeles</p>
-        <h1 class="letters-page-title">Dispatches from a world-builder in progress</h1>
-      </header>
-
-      <div class="letters-page-grid">
-        {% for post in site.posts %}
-        <a class="letters-page-card" href="{{ post.url }}">
-          <p class="letter-cat">{{ post.category }}</p>
-          <h2 class="letter-title">{{ post.title }}</h2>
-          <p class="letter-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-          <p class="letter-date">{{ post.date | date: "%B %Y" }}</p>
-        </a>
-        {% endfor %}
-
-        {% if site.posts.size == 0 %}
-        <p class="letters-empty">No letters yet — check back soon.</p>
+    <div class="field-archive-content">
+      <div class="field-letter-list">
+      {% for post in site.posts %}
+        {% assign day = post.date | date: "%-d" %}
+        {% assign day_mod_100 = day | modulo: 100 %}
+        {% assign day_mod_10 = day | modulo: 10 %}
+        {% if day_mod_100 >= 11 and day_mod_100 <= 13 %}
+          {% assign ordinal = "th" %}
+        {% elsif day_mod_10 == 1 %}
+          {% assign ordinal = "st" %}
+        {% elsif day_mod_10 == 2 %}
+          {% assign ordinal = "nd" %}
+        {% elsif day_mod_10 == 3 %}
+          {% assign ordinal = "rd" %}
+        {% else %}
+          {% assign ordinal = "th" %}
         {% endif %}
+        <a class="field-letter-row" href="{{ post.url }}">
+          <span class="field-letter-number">Letter No. {{ post.letter_number | default: forloop.rindex | prepend: "0" | slice: -2, 2 }}</span>
+          <span class="field-letter-details">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.location | default: "Asunción" }} · {{ post.date | date: "%B" }} {{ day }}{{ ordinal }}, {{ post.date | date: "%Y" }}</time>
+            <span class="field-letter-title">{{ post.title }}</span>
+            {% if post.subtitle %}<span class="field-letter-subtitle">{{ post.subtitle }}</span>{% endif %}
+          </span>
+          <span class="field-letter-read">Read letter <span aria-hidden="true">→</span></span>
+        </a>
+      {% endfor %}
       </div>
 
+      {% if site.posts.size == 0 %}
+      <p class="field-empty">No letters yet — check back soon.</p>
+      {% endif %}
+
+      <aside class="field-subscribe" aria-labelledby="subscribe-title">
+        <div>
+          <h2 id="subscribe-title">Get the next letter in your inbox!</h2>
+          <p>Leave your email below, and the next one will come straight to you.</p>
+        </div>
+        <a class="field-subscribe-link" href="https://docs.google.com/forms/d/e/1FAIpQLScpBfKdES_TTMQgKG4GWJrlWpD8Tq3owcstJiWIPq9vBCK61w/viewform?usp=publish-editor" target="_blank" rel="noopener">Send me the next one <span aria-hidden="true">→</span></a>
+      </aside>
     </div>
-  </div>
+  </main>
 
   <footer>
     <span class="footer-name">Angeles Cibils Bernardes</span>
     <span class="footer-copy">© 2026 · All rights reserved</span>
   </footer>
-
 </body>
 </html>

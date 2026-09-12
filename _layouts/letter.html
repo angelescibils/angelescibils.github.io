@@ -9,53 +9,53 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css" />
 </head>
-<body>
-
+<body class="single-letter-body">
   <nav>
     <a class="nav-name" href="/">Angeles Cibils Bernardes</a>
     <ul class="nav-links">
       <li><a href="/#about">About</a></li>
-      <li><a href="/#worlds">Writing</a></li>
-      <li><a href="/#systems">Systems</a></li>
+      <li><a href="/#writing">Books</a></li>
+      <li><a href="/#projects">Projects</a></li>
       <li><a href="/#music">Music</a></li>
-      <li><a href="/letters">Letters</a></li>
-      <li><a href="/#contact">Contact</a></li>
+      <li><a href="/letters/" aria-current="page">Letters</a></li>
     </ul>
   </nav>
 
-  <div class="letter-page">
-    <div class="letter-page-inner">
+  {% assign day = page.date | date: "%-d" | plus: 0 %}
+  {% assign day_mod_100 = day | modulo: 100 %}
+  {% assign day_mod_10 = day | modulo: 10 %}
+  {% if day_mod_100 >= 11 and day_mod_100 <= 13 %}
+    {% assign suffix = "th" %}
+  {% elsif day_mod_10 == 1 %}
+    {% assign suffix = "st" %}
+  {% elsif day_mod_10 == 2 %}
+    {% assign suffix = "nd" %}
+  {% elsif day_mod_10 == 3 %}
+    {% assign suffix = "rd" %}
+  {% else %}
+    {% assign suffix = "th" %}
+  {% endif %}
 
-      <a class="letter-back" href="/letters">
-        <i class="ti ti-arrow-left"></i> All letters
-      </a>
-
-      <header class="letter-header">
-        <p class="letter-header-cat">{{ page.category }}</p>
-        <h1 class="letter-header-title">{{ page.title }}</h1>
-        <p class="letter-header-date">{{ page.date | date: "%B %d, %Y" }}</p>
+  <main class="field-reader">
+    <a class="field-reader-back" href="/letters/">← Back to all letters</a>
+    <article class="field-letter-sheet">
+      <header class="field-letter-header">
+        <p class="field-letter-dateline">{% if page.letter_number %}Letter No. {{ page.letter_number }} · {% elsif page.issue %}Letter No. {{ page.issue }} · {% endif %}{{ page.location | default: "San Francisco" }} · {{ page.date | date: "%B" }} {{ day }}{{ suffix }}, {{ page.date | date: "%Y" }}</p>
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="field-letter-subtitle">{{ page.subtitle }}</p>{% endif %}
       </header>
-
-      <article class="letter-body">
-        {{ content }}
-      </article>
-
-      <footer class="letter-footer">
-        <p>— Angeles Cibils Bernardes</p>
-        <a class="letter-back" href="/letters">
-          <i class="ti ti-arrow-left"></i> Back to all letters
-        </a>
-      </footer>
-
-    </div>
-  </div>
-
+      <div class="field-letter-prose">{{ content }}</div>
+      <div class="field-letter-signoff" aria-label="Signed by Angeles">Angeles</div>
+      <nav class="field-letter-pagination" aria-label="Letter navigation">
+        {% if page.previous %}<a href="{{ page.previous.url }}">← Previous letter</a>{% else %}<span></span>{% endif %}
+        {% if page.next %}<a href="{{ page.next.url }}">Next letter →</a>{% endif %}
+      </nav>
+    </article>
+  </main>
   <footer>
     <span class="footer-name">Angeles Cibils Bernardes</span>
     <span class="footer-copy">© 2026 · All rights reserved</span>
   </footer>
-
 </body>
 </html>
